@@ -4,7 +4,7 @@ Docker container for Ubuntu 16.04 including ubuntu-desktop and vncserver.
 
 # How to run
 
-`docker run -v $(pwd)/robots:/robots amarin-rv/selenium-client bash -c "pybot /robots"`
+`docker run -v $(pwd)/robots:/robots amarinnwc/selenium-client bash -c "pybot /robots"`
 
 # Run with zalenium
 
@@ -12,4 +12,4 @@ Docker container for Ubuntu 16.04 including ubuntu-desktop and vncserver.
 
 `docker run --rm -ti --name zalenium --network default --net cinet --ip 172.18.0.5 -v $(which docker):/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos dosel/zalenium start`
 
-`docker run --net cinet --name seleniumclient -v $(pwd)/robots:/robots -v $(pwd):/output -e ROBOT_TESTS=/robots/ -e BROWSER=firefox amarin-rv/selenium-client bash -c "pybot /robots"`
+`docker run --net cinet --name seleniumclient -v $(pwd)/robots:/robots -v $(pwd):/output -e ROBOT_TESTS=/robots/ -e BROWSER=firefox amarinnwc/selenium-client bash -c "pybot /robots"`

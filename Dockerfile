@@ -8,6 +8,7 @@ RUN apt-get update
 RUN apt-get install -y wget nano unzip
 RUN apt-get install -y gdebi
 #RUN apt-get install -y openjdk-8-jre-headless
+RUN apt-get install -y python-tk
 RUN apt-get install -y python-pip
 
 RUN pip install --upgrade pip

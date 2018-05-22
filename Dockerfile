@@ -43,4 +43,6 @@ RUN unzip chromedriver_linux64.zip
 RUN cp chromedriver /usr/bin/
 RUN chmod +x /usr/bin/chromedriver
 
+EXPOSE 5901
+
 CMD ["bash"]

@@ -33,16 +33,12 @@ RUN chmod +x /usr/bin/firefox
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
 RUN tar xfz geckodriver-v0.11.1-linux64.tar.gz
 RUN cp geckodriver /usr/bin/
-RUN cp geckodriver /usr/bin/
 RUN chmod +x /usr/bin/geckodriver
 
 # Install chrome driver 2.9
 RUN wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
-RUN apt-get install unzip
 RUN unzip chromedriver_linux64.zip
 RUN cp chromedriver /usr/bin/
 RUN chmod +x /usr/bin/chromedriver
 
 EXPOSE 5901
-
-CMD ["bash"]

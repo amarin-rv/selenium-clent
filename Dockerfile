@@ -13,6 +13,8 @@ RUN apt-get install -y python-pip
 
 RUN pip install --upgrade pip
 
+RUN pip install urllib3
+
 # Install Python Selenium
 RUN pip install -U selenium==3.3.1
 RUN pip install robotframework-selenium2library
